@@ -1,0 +1,26 @@
+@import url("../fonts/Fonts.css");
+
+* {
+    -primary: #6E65ED;
+    -text-secondary: #6F6F6F;
+    -input-placeholder: #B9B9B9;
+
+    -black: #000000;
+    -white: #ffffff;
+
+    -info: #65A8FF;
+    -success: #50CBA4;
+    -warning: #FF9E17;
+    -danger: #FF7979;
+    -violet: #8750CB;
+
+    -bg-main: #FBFBFB;
+    -border-main: #E5E7EB;
+    -border-danger: #FFA5A5;
+    -border-primary: #A49DFF;
+
+    -disabled-btn-pagination: #E6E6E6;
+
+    -icon-btn-hover: rgba(0, 0, 0, 0.02);
+    -sidebar-menu-item-hover: rgba(0, 0, 0, 0.05);
+}

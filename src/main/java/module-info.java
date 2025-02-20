@@ -1,6 +1,9 @@
 module com.watchlist {
     requires javafx.controls;
+    requires javafx.graphics;
     requires javafx.fxml;
+
+    requires com.jfoenix;
 
     requires org.slf4j;
     requires static lombok;

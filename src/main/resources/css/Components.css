@@ -1,0 +1,68 @@
+/*******************************************************************
+* IconButton Styles
+********************************************************************/
+.icon-btn {
+    -fx-cursor: hand;
+    -fx-min-width: 32px;
+    -fx-max-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-height: 32px;
+    -fx-background-radius: 50%;
+    -fx-focus-traversable: false;
+}
+
+.icon-btn:hover {
+    -fx-cursor: hand;
+    -fx-background-color: -icon-btn-hover;
+}
+
+.icon-btn-info:hover {
+    -fx-background-color: derive(-info, 95%);
+}
+
+.icon-btn-danger:hover {
+    -fx-background-color: derive(-danger, 95%);
+}
+
+/*******************************************************************
+* Sidebar Menu Item Styles
+********************************************************************/
+.sidebar-menu-item {
+    -fx-cursor: hand;
+    -fx-background-radius: 4px;
+    -fx-background-color: transparent;
+}
+
+.sidebar-menu-item:hover,
+.sidebar-menu-item.active {
+    -fx-background-color: -sidebar-menu-item-hover;
+}
+
+.sidebar-menu-item .indicator {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4px 0 0 4px;
+}
+
+.sidebar-menu-item:hover .indicator,
+.sidebar-menu-item.active .indicator {
+    -fx-background-color: -primary;
+}
+
+.sidebar-menu-item .label {
+    -fx-font-size: 12px;
+    -fx-font-family: "Nunito Regular";
+}
+
+/*******************************************************************
+* Search Top-bar Styles
+********************************************************************/
+.search-top-bar {
+    -fx-spacing: 4;
+}
+
+.search-top-bar .text-field {
+    -fx-text-fill: -primary;
+    -fx-focus-traversable: false;
+    -fx-background-color: transparent;
+    -fx-prompt-text-fill: -input-placeholder;
+}

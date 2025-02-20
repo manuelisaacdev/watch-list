@@ -1,11 +1,376 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<HBox prefHeight="720.0" prefWidth="1280.0" styleClass="main" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.watchlist.controller.MainController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.watchlist.controller.MainController">
    <children>
-      <VBox prefWidth="260.0" styleClass="sidebar" />
+      <VBox prefWidth="260.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" onMouseDragged="#handleTopbarMouseDragged" onMousePressed="#handleTopbarMousePressed" prefHeight="64.0" styleClass="border-main-b">
+               <children>
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="28.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/favicon-horizontalpng.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="32.0" ripplerFill="BLACK" styleClass="icon-btn">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/tabler_menu-4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="12.0" right="12.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor>
+            </HBox>
+            <VBox VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="161.0" prefWidth="259.0" spacing="4.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/iconamoon_home-light.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="sidebar-menu-item-label" text="Dashboard" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="sidebar-menu-item" />
+                              <String fx:value="active" />
+                           </styleClass>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/mage_users.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Pessoas" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="46.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/clarity_animation-line.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Animes" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="82.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/fluent_movies-and-tv-20-regular.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Filmes" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="118.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/solar_library-broken.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Séries" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="154.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/solar_masks-broken.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Doramas" />
+                           </children>
+                        </HBox>
+                        <HBox styleClass="border-main-t">
+                           <children>
+                              <Label text="Status">
+                                 <styleClass>
+                                    <String fx:value="text-12" />
+                                    <String fx:value="font-semibold" />
+                                 </styleClass></Label>
+                           </children>
+                           <padding>
+                              <Insets top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="46.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/iconamoon_category-light.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Gêneros" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="82.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/solar_heart-broken.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Favoritos" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="118.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/fluent_calendar-agenda-28-regular.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Tarefas" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="154.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/tabler_share.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Compartilhamentos" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="226.0" styleClass="border-main-t">
+                           <children>
+                              <Label text="Suporte">
+                                 <styleClass>
+                                    <String fx:value="text-12" />
+                                    <String fx:value="font-semibold" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets top="8.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="190.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/lsicon_setting-outline.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Configurações" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="430.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" spacing="12.0" styleClass="sidebar-menu-item">
+                           <padding>
+                              <Insets right="12.0" />
+                           </padding>
+                           <children>
+                              <Pane prefWidth="4.0" styleClass="indicator" />
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/mynaui_logout.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Sair" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" layoutX="22.0" layoutY="22.0" prefHeight="161.0" prefWidth="259.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/sidebar_banner.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label text="Todos os direitos estão reservados  - ManuelDesign" textAlignment="CENTER" wrapText="true">
+                           <styleClass>
+                              <String fx:value="text-12" />
+                              <String fx:value="text-secondary" />
+                           </styleClass>
+                        </Label>
+                     </children></VBox>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="rounded-l-8" />
+            <String fx:value="border-main-r" />
+         </styleClass>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" onMouseDragged="#handleTopbarMouseDragged" onMousePressed="#handleTopbarMousePressed" prefHeight="64.0">
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="rounded-tr-8" />
+                  <String fx:value="border-main-b" />
+               </styleClass>
+               <children>
+                  <HBox alignment="CENTER_LEFT" styleClass="search-top-bar" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/iconoir_search.png" />
+                           </image>
+                        </ImageView>
+                        <TextField promptText="Pesquisar..." />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="border-main-r">
+                     <children>
+                        <Label text="Nenhuma pessoa selecionada">
+                           <styleClass>
+                              <String fx:value="text-12" />
+                              <String fx:value="font-regular" />
+                              <String fx:value="text-secondary" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="12.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" spacing="20.0">
+                     <children>
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="46.0" layoutY="28.0" ripplerFill="#65a8ff">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/mdi_about-circle-outline.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="icon-btn" />
+                              <String fx:value="icon-btn-info" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="26.0" onAction="#handleMinimize" ripplerFill="#0000007f" styleClass="icon-btn">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/fluent_minimize-20-filled.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="66.0" layoutY="26.0" onAction="#handleExit" ripplerFill="#ff7979">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/material-symbols_close-rounded.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="icon-btn" />
+                              <String fx:value="icon-btn-danger" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="12.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="12.0" right="12.0" top="20.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor></HBox>
+            <StackPane VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
    </children>
+   <stylesheets>
+      <URL value="@../css/Base.css" />
+      <URL value="@../css/Components.css" />
+      <URL value="@../css/Utilities.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="bg-main" />
+      <String fx:value="rounded-8" />
+   </styleClass>
 </HBox>

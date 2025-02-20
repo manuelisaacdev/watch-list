@@ -1,0 +1,84 @@
+/*******************************************************************
+* Border Styles
+********************************************************************/
+.border-main-t {
+    -fx-border-style: solid;
+    -fx-border-width: 1px 0 0 0;
+    -fx-border-color: -border-main;
+}
+
+.border-main-b {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: -border-main;
+}
+
+.border-main-r {
+    -fx-border-style: solid;
+    -fx-border-width: 0 1px 0 0;
+    -fx-border-color: -border-main;
+}
+
+/*******************************************************************
+* Text Size Styles
+********************************************************************/
+.text-12 {
+    -fx-font-size: 12px;
+}
+
+/*******************************************************************
+* Text Color Styles
+********************************************************************/
+.text-secondary {
+    -fx-text-fill: -text-secondary;
+}
+
+
+/*******************************************************************
+* Font Weight Styles
+********************************************************************/
+.font-light {
+    -fx-font-family: "Nunito Light";
+}
+
+.font-regular {
+    -fx-font-family: "Nunito Regular";
+}
+
+.font-medium {
+    -fx-font-family: "Nunito Medium";
+}
+
+.font-semibold {
+    -fx-font-family: "Nunito SemiBold";
+}
+
+.font-bold {
+    -fx-font-family: "Nunito Bold";
+}
+
+/*******************************************************************
+* Background Styles
+********************************************************************/
+.bg-main {
+    -fx-background-color: -bg-main;
+}
+
+.bg-white {
+    -fx-background-color: -white;
+}
+
+/*******************************************************************
+* Radius Styles
+********************************************************************/
+.rounded-8 {
+    -fx-background-radius: 8px;
+}
+
+.rounded-l-8 {
+    -fx-background-radius: 8px 0 0 8px;
+}
+
+.rounded-tr-8 {
+    -fx-background-radius: 0 8px 0 0;
+}
